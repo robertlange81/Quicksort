@@ -8,7 +8,7 @@ namespace Quicksort
 {
     class Quicksort
     {
-        public static void quicksort(int[] liste, int links, int rechts)
+        public static void quicksort(ref int[] liste, int links, int rechts)
         {
             if (links < rechts)
             {
@@ -18,8 +18,8 @@ namespace Quicksort
                 }
                 Console.WriteLine();
                 int teiler = teile(liste, links, rechts);
-                quicksort(liste, links, teiler - 1);
-                quicksort(liste, teiler + 1, rechts);
+                quicksort(ref liste, links, teiler - 1);
+                quicksort(ref liste, teiler + 1, rechts);
             }
         }
 
